@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Customizable Flyer | U.S. Chamber of Commerce</title>
+    <link rel="stylesheet" href="/app/covid-19-flyer/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46739516-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-46739516-1');
+    </script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="FormContainer">
+            <h2>COVID-19 Customizable Flyer</h2>
+            <p style="color: #555; font-size: 18px; font-style: italic;">Use the following fields to help you customize
+                the flyer, then
+                print it or save it as a PDF.</p>
+            <form class="checklist-inputs" id="KeepingSafe">
+                <h3>Keeping People Safe</h3>
+                <label>
+                    <input type="checkbox">
+                    <span id="KS1">We train our employees on health and safety standards.</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span id="KS2">We screen the health of our suppliers, employees, products, and
+                        customers.</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span id="KS3">We actively encourage sick employees to stay
+                        home.</span>
+                </label>
+
+                <div class="form-block">
+                    <input type="text" placeholder="Or write your own..." maxlength="130" />
+                    <input type="submit" value="Add" />
+                </div>
+            </form>
+            <form class="checklist-inputs" id="SecuringEnvironment">
+                <h3>Securing a Healthy Environment</h3>
+                <label>
+                    <input type="checkbox">
+                    <span id="SE1">We are deep cleaning and disinfecting our business including
+                        high-touch surfaces.</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span id="SE2">We are opening windows or adjusting our heating/cooling
+                        to maximize ventilation.</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span id="SE3">We are taking measures to avoid crowding and
+                        encouraging people to use online services.</span>
+                </label>
+                </li>
+
+                <div class="form-block">
+                    <input type="text" placeholder="Or write your own..." maxlength="130" />
+                    <input type="submit" value="Add" />
+                </div>
+            </form>
+            <form class="checklist-inputs" id="FlexibleWorkplace">
+                <h3>Creating a Flexible Workplace</h3>
+
+                <label>
+                    <input type="checkbox">
+                    <span id="FW1">We are assessing the risks of business travel.</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span id="FW2">We are using videoconferencing for meetings and events
+                        where possible.</span>
+                </label>
+                <label>
+                    <input type="checkbox">
+                    <span id="FW3">We are accommodating employees who become sick or
+                        have a sick family member.</span>
+                </label>
+                <div class="form-block">
+                    <input type="text" placeholder="Or write your own..." maxlength="130" />
+                    <input type="submit" value="Add" />
+                </div>
+            </form>
+            <form id="GlobalInfo">
+                <label for="MainContact">
+                    <span>Main Contact</span>
+                    <input type="text" name="contact" id="MainContact">
+                </label>
+                <label for="ImageUpload" style="cursor: pointer;">
+                    <span>Logo</span>
+                    <div id="LogoUploadButton">Upload Your Logo</div>
+                    <input type="file" accept="image/*" name="image" id="ImageUpload" onchange="loadImageFile(event)"
+                        style="display: none;" />
+                </label>
+            </form>
+            <button type="print" onclick="handlePrint()" id="PrintButton">Print</button>
+        </div>
+        <div id="OutputContainer">
+            <div id="Header">
+                <img src="/app/covid-19-flyer/img/header.png">
+                <p class="instructions" contenteditable="true">If you’re worried about the Coronavirus (COVID-19),
+                    please be reassured that
+                    we are following the health and safety guidance as prescribed by the Centers for
+                    Disease Control and Prevention (CDC), as well as the local public health department.</p>
+                <h3 contenteditable="true">Here are the actions we are taking</h3>
+            </div>
+            <h4 class="checklist-header" style="background: #005595;" contenteditable="true">Keeping People Safe</h4>
+            <div class="checklist-container">
+                <img class="checklist-icon" src="/app/covid-19-flyer/img/check1.png">
+                <div class="checklist-items" id="KeepingSafeItems"></div>
+            </div>
+            <h4 class="checklist-header" style="background: #F06457;" contenteditable="true">Securing a Healthy
+                Environment</h4>
+            <div class="checklist-container">
+                <img class="checklist-icon" src="/app/covid-19-flyer/img/check2.png">
+                <div class="checklist-items" id="SecuringEnvironmentItems"></div>
+            </div>
+            <h4 class="checklist-header" style="background: #5AA7EB;" contenteditable="true">Creating a Flexible
+                Workplace</h4>
+            <div class="checklist-container">
+                <img class="checklist-icon" src="/app/covid-19-flyer/img/check3.png">
+                <div class="checklist-items" id="FlexibleWorkplaceItems"></div>
+            </div>
+            <hr class="thick-hr" />
+            <div id="Subfooter">
+                <img id="Logo" src="/app/covid-19-flyer/img/logo_placeholder.png" />
+                <p contenteditable="true">If you have any questions or concerns,
+                    please ask for the manager or contact us at <br /><span id="ContactUs"></span></p>
+            </div>
+            <hr />
+            <div id="Footer">
+                <img src="/app/covid-19-flyer/img/chamber-logo.png">
+                <div class="footer-text">
+                    <p>This document was prepared by the business owner/proprietor using a template from the U.S.
+                        Chamber of Commerce. The U.S. Chamber of Commerce is not responsible for the final content or
+                        implementation of this
+                        document.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/app/covid-19-flyer/index.js"></script>
+</body>
+
+</html>
