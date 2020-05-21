@@ -1,0 +1,4 @@
+node_modules/
+dist/
+google-service-account.json
+digital-products-tools-*.json
