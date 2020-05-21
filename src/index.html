@@ -1,156 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid-19 Customizable Flyer | U.S. Chamber of Commerce</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/bundle.min.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46739516-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-46739516-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-46739516-1');
+      gtag("config", "UA-46739516-1");
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="Wrapper">
-        <div id="FormContainer">
-            <h2>COVID-19 Customizable Flyer</h2>
-            <p style="color: #555; font-size: 18px; font-style: italic;">Use the following fields to help you customize
-                the flyer, then
-                print it or save it as a PDF.</p>
-            <form class="checklist-inputs" id="KeepingSafe">
-                <h3>Keeping People Safe</h3>
-                <label>
-                    <input type="checkbox">
-                    <span id="KS1">We train our employees on health and safety standards.</span>
-                </label>
-                <label>
-                    <input type="checkbox">
-                    <span id="KS2">We screen the health of our suppliers, employees, products, and
-                        customers.</span>
-                </label>
-                <label>
-                    <input type="checkbox">
-                    <span id="KS3">We actively encourage sick employees to stay
-                        home.</span>
-                </label>
-
-                <div class="form-block">
-                    <input type="text" placeholder="Or write your own..." maxlength="130" />
-                    <input type="submit" value="Add" />
-                </div>
-            </form>
-            <form class="checklist-inputs" id="SecuringEnvironment">
-                <h3>Securing a Healthy Environment</h3>
-                <label>
-                    <input type="checkbox">
-                    <span id="SE1">We are deep cleaning and disinfecting our business including
-                        high-touch surfaces.</span>
-                </label>
-                <label>
-                    <input type="checkbox">
-                    <span id="SE2">We are opening windows or adjusting our heating/cooling
-                        to maximize ventilation.</span>
-                </label>
-                <label>
-                    <input type="checkbox">
-                    <span id="SE3">We are taking measures to avoid crowding and
-                        encouraging people to use online services.</span>
-                </label>
-                </li>
-
-                <div class="form-block">
-                    <input type="text" placeholder="Or write your own..." maxlength="130" />
-                    <input type="submit" value="Add" />
-                </div>
-            </form>
-            <form class="checklist-inputs" id="FlexibleWorkplace">
-                <h3>Creating a Flexible Workplace</h3>
-
-                <label>
-                    <input type="checkbox">
-                    <span id="FW1">We are assessing the risks of business travel.</span>
-                </label>
-                <label>
-                    <input type="checkbox">
-                    <span id="FW2">We are using videoconferencing for meetings and events
-                        where possible.</span>
-                </label>
-                <label>
-                    <input type="checkbox">
-                    <span id="FW3">We are accommodating employees who become sick or
-                        have a sick family member.</span>
-                </label>
-                <div class="form-block">
-                    <input type="text" placeholder="Or write your own..." maxlength="130" />
-                    <input type="submit" value="Add" />
-                </div>
-            </form>
-            <form id="GlobalInfo">
-                <label for="MainContact">
-                    <span>Main Contact</span>
-                    <input type="text" name="contact" id="MainContact">
-                </label>
-                <label for="ImageUpload" style="cursor: pointer;">
-                    <span>Logo</span>
-                    <div id="LogoUploadButton">Upload Your Logo</div>
-                    <input type="file" accept="image/*" name="image" id="ImageUpload" onchange="loadImageFile(event)"
-                        style="display: none;" />
-                </label>
-            </form>
-            <button type="print" onclick="handlePrint()" id="PrintButton">Print</button>
+      <div id="FormContainer">
+        <div id="FormContainerItems">
+          <h2>Coronavirus Customizable Flyer</h2>
+          <p class="intro-text">
+            This is a flyer you can customize and post to inform your employees
+            and customers about the steps you are taking to protect against the
+            spread of COVID-19.
+          </p>
+          <p class="intro-text">
+            These are common steps recommended by the CDC, states, and local
+            jurisdictions, as of May 18, 2020. This is not a substitute for
+            guidance from your state or local health departments, so please
+            consult those resources as well.
+          </p>
+          <p class="instruction">
+            <b>Instructions</b>: 
+            <ul>
+              <li>Click on the arrows below to see suggested actions for
+                each category</li>
+              <li>Select as many actions as apply by checking the boxes
+                in each category</li>
+              <li>You can also add your own action by writing in the
+                space provided</li>
+            </ul>  
+          </p>
+          <div id="FormElements"></div>
+          <form id="GlobalInfo">
+            <label for="MainContact">
+              <span>Main Contact</span>
+              <input type="text" name="contact" id="MainContact" />
+            </label>
+            <label for="ImageUpload" style="cursor: pointer;">
+              <span>Logo</span>
+              <div id="LogoUploadButton">
+                <span style="white-space: nowrap;"></span>
+                <i class="fa fa-upload" aria-hidden="true"></i>&nbsp; Upload
+              </div>
+              <input
+                type="file"
+                accept="image/*"
+                name="image"
+                id="ImageUpload"
+                onchange="loadImageFile(event)"
+                style="display: none;"
+              />
+            </label>
+          </form>
         </div>
-        <div id="OutputContainer">
-            <div id="Header">
-                <img src="/img/header.png">
-                <p class="instructions" contenteditable="true">If you’re worried about the Coronavirus (COVID-19),
-                    please be reassured that
-                    we are following the health and safety guidance as prescribed by the Centers for
-                    Disease Control and Prevention (CDC), as well as the local public health department.</p>
-                <h3 contenteditable="true">Here are the actions we are taking</h3>
-            </div>
-            <h4 class="checklist-header" style="background: #005595;" contenteditable="true">Keeping People Safe</h4>
-            <div class="checklist-container">
-                <img class="checklist-icon" src="/img/check1.png">
-                <div class="checklist-items" id="KeepingSafeItems"></div>
-            </div>
-            <h4 class="checklist-header" style="background: #F06457;" contenteditable="true">Securing a Healthy
-                Environment</h4>
-            <div class="checklist-container">
-                <img class="checklist-icon" src="/img/check2.png">
-                <div class="checklist-items" id="SecuringEnvironmentItems"></div>
-            </div>
-            <h4 class="checklist-header" style="background: #5AA7EB;" contenteditable="true">Creating a Flexible
-                Workplace</h4>
-            <div class="checklist-container">
-                <img class="checklist-icon" src="/img/check3.png">
-                <div class="checklist-items" id="FlexibleWorkplaceItems"></div>
-            </div>
-            <hr class="thick-hr" />
-            <div id="Subfooter">
-                <img id="Logo" src="/img/logo_placeholder.png" />
-                <p contenteditable="true">If you have any questions or concerns,
-                    please ask for the manager or contact us at <br /><span id="ContactUs"></span></p>
-            </div>
-            <hr />
-            <div id="Footer">
-                <img src="/img/chamber-logo.png">
-                <div class="footer-text">
-                    <p>This document was prepared by the business owner/proprietor using a template from the U.S.
-                        Chamber of Commerce. The U.S. Chamber of Commerce is not responsible for the final content or
-                        implementation of this
-                        document.</p>
-                </div>
-            </div>
+        <div id="MainButtons">
+          <button type="print" onclick="handlePrint()" id="PrintButton">
+            <i class="fa fa-print" aria-hidden="true"></i>
+            <span>Print</span>
+          </button>
+          <button type="button" onclick="handleReset()" id="ResetButton">
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+            <span>Reset</span>
+          </button>
         </div>
+      </div>
+      <div id="OutputContainer">
+        <div id="Header">
+          <img src="./img/header.png" />
+          <h3 contenteditable="true">Here are the actions we are taking</h3>
+        </div>
+        <div id="Body" style="height: 620px; width: 598px;">
+          <div id="BodyContent" style="font-size: 22px;"></div>
+        </div>
+        <hr />
+        <div id="Subfooter">
+          <p contenteditable="true">
+            If you have any questions, you can reach us at
+            <span id="ContactUs"></span>
+          </p>
+          <img id="Logo" src="./img/LogoPlaceholder.png" />
+        </div>
+      </div>
     </div>
-    <script src="/index.js"></script>
-</body>
-
+    <script src="./js/bundle.min.js"></script>
+  </body>
 </html>
