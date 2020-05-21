@@ -1,13 +1,33 @@
 {
-  "name": "covid-19",
+  "name": "covid-19-flyer-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "live-server ./src/",
-    "deploy": "aws s3 sync ./src/ s3://uschamber.com-legacy-content/app/covid-19-flyer --acl public-read",
-    "deploy_old": "aws s3 sync ./redirect/ s3://uschamber-webassets/uschamber.com/interactives/covid-19-flyer --acl public-read"
+    "dev": "gulp watch",
+    "build": "gulp build",
+    "deploy": "gulp build && aws s3 sync ./src/ s3://uschamber.com-legacy-content/app/covid-19-flyer --acl public-read",
+    "deploy_stage": "gulp build && aws s3 sync ./src/ s3://uschamber.com-legacy-content/app/covid-19-flyer-stage --acl public-read"
   },
   "author": "Matthew Bloomfield",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "autoprefixer": "^9.8.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache-break": "^0.1.3-rc.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace-path": "^0.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "postcss-color-function": "^4.1.0",
+    "precss": "^4.0.0"
+  }
 }
