@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp build",
-    "deploy": "gulp build && aws s3 sync ./src/ s3://uschamber.com-legacy-content/app/covid-19-flyer --acl public-read",
-    "deploy_stage": "gulp build && aws s3 sync ./src/ s3://uschamber.com-legacy-content/app/covid-19-flyer-stage --acl public-read"
+    "deploy": "gulp build && aws s3 sync ./dist/ s3://uschamber.com-legacy-content/app/covid-19-flyer --acl public-read",
+    "deploy_stage": "gulp build && aws s3 sync ./dist/ s3://uschamber.com-legacy-content/app/covid-19-flyer-stage --acl public-read"
   },
   "author": "Matthew Bloomfield",
   "license": "ISC",
