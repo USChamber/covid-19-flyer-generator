@@ -4,12 +4,10 @@ This is a very simple application built to handle the creation and modification 
 
 ## Installation and Usage
 
-Clone the repository to your local machine. 
+1. Clone the repository to your local machine. 
+2. Edit the files in `/src`. 
+3. For local dev: `npm run dev`. 
+4. For final build: `npm run build`
+6. Publish to S3 Staging: `npm run deploy_stage`. 
+7. Publish to S3 Prod: `npm run deploy`.
 
-Edit the files. 
-
-Publish to your CDN. 
-
-## Future Plans
-
-It would be nice to create a better build process for this so we could transpile it and what not. But given the short TAT on this we kept it simple. 
