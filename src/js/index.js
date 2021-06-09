@@ -5,13 +5,23 @@ document.getElementById("MainContact").addEventListener("keyup", function (ev) {
 
 var data = {
   ppe: {
-    icon: "mask.png",
+    icon: "mask-face.png",
     alt: "Mask",
     header: "Personal Protective Equipment",
     bullets: [
-      "Asking employees and customers to wear a mask covering their nose and mouth",
-      "Using shields or barriers between customers and clerks at service counters",
-      "Providing personal protective equipment for employees, including gloves",
+      "Everyone who enters is required to wear a face covering that meets CDC guidelines",
+      "We provide masks, gloves or other personal protective equipment when appropriate",
+    ],
+  },
+  socialDistancing: {
+    icon: "distance.png",
+    alt: "People Social Distancing",
+    header: "Social Distancing",
+    bullets: [
+      "We require individuals to remain at least six feet apart while indoors",
+      "Our business operates at reduced capacity to reduce the risk of infection",
+      "We limit shared tools or spaces inside our facilities",
+      "We set aside certain hours for vulnerable groups",
     ],
   },
   screening: {
@@ -19,81 +29,51 @@ var data = {
     alt: "Thermometer",
     header: "Screening",
     bullets: [
-      "Screening the health of our suppliers, employees, and customers",
-      "Screening workers for fever (over 100.4 degrees), cough, or shortness of breath",
-    ],
-  },
-  socialDistancing: {
-    icon: "socialDistancing.png",
-    alt: "People Social Distancing",
-    header: "Social Distancing",
-    bullets: [
-      "Maintaining the six-foot physical distancing requirements for employees and patrons",
-      "Operating business at a reduced occupancy",
-      "Refraining from physical contact and limit shared tools or spaces",
-      "Scheduling specific hours of operation for vulnerable populations",
-    ],
-  },
-  cleaning: {
-    icon: "cleaning.png",
-    alt: "Spray Cleaner Bottle",
-    header: "Cleaning",
-    bullets: [
-      "Disinfecting common areas regularly including high-touch surfaces",
-      "Reducing store hours to increase cleaning",
-      "Providing disinfectant and sanitation products for workers to clean their workspace and equipment",
+      "We require employees to self-report COVID-like symptoms before work",
+      "Employees with symptoms or potential exposure are required to stay home",
+      "COVID-19 tests are available to workers",
+      "Our company screens people for fever",
     ],
   },
   hygiene: {
-    icon: "hygiene.png",
+    icon: "handwash.png",
     alt: "Hands Being Washed",
     header: "Hygiene",
     bullets: [
-      "Making hand sanitizer, disinfecting wipes, or soap and water readily available to employees and customers",
-      "Requiring hand washing and sanitation by employees",
-      "Requiring use of dedicated gloves for employees",
+      "Employees are urged to wash their hands on a regular basis",
+      "We routinely disinfect surfaces in high-touch or common areas",
+      "Hand sanitizer or handwashing stations are available in our facilities",
+      "We ensure clean air through filtered HVAC systems or exterior doors/windows",
     ],
   },
-  stayHome: {
-    icon: "stayHome.png",
-    alt: "People Staying at Home",
-    header: "Stay at Home",
+  remoteWork: {
+    icon: "remote-work.png",
+    alt: "A symbol denoting Remote Work",
+    header: "Remote Work",
     bullets: [
-      "Implementing teleworking, virtual meetings, and staggered shifts where possible",
-      "Encouraging high-risk individuals to stay home",
-      "Requiring workers who exhibit symptoms or illness to stay home or seek medical attention",
+      "We leverage technology to reduce the need for in-person meetings",
+      "We encourage employees at high risk of serious complications to work from home",
     ],
   },
-  curbsideService: {
-    icon: "curbsideService.png",
-    alt: "Shopping App on Mobile Device",
-    header: "Curbside Service",
+
+  education: {
+    icon: "education.png",
+    alt: "A symbol denoting education",
+    header: "Education",
     bullets: [
-      "Using technology solutions where possible to reduce person-to-person interaction",
-      "Encouraging non-cash payments and suspend use of PIN pads when possible",
-      "Using curbside, delivery, or pick-up services where practical",
+      "We are committed to following COVID-19 recommendations from CDC and local health officials",
+      "Our company posts reminders to wear a mask, practice social distancing, and wash hands",
+      "We are actively encouraging employees and customers to get the COVID-19 vaccine",
     ],
   },
-  travel: {
-    icon: "travel.png",
-    alt: "Travel Tickets",
-    header: "Travel & Events",
+  vaccines: {
+    icon: "vaccines.png",
+    alt: "A symbol denoting vaccines",
+    header: "Vaccines",
     bullets: [
-      "Limiting non-essential business travel",
-      "Curtailing business travel to high-infection areas",
-      "Discouraging large gatherings",
-    ],
-  },
-  food: {
-    icon: "food.png",
-    alt: "Fast Food",
-    header: "Food",
-    bullets: [
-      "Discontinuing use of salad bars, buffets, and self-service",
-      "Using disposable menus, rolled silverware, and eliminate table presets",
-      "Limiting reservations for large groups",
-      "Keeping bar seating closed",
-      "Allowing reservation-only and call-ahead seating",
+      "We encourage employees and customers to get vaccinated at the earliest opportunity",
+      "Our company provides paid time off or other accommodations for employees to get vaccinated",
+      "Employees who receive the COVID-19 shot are eligible for incentives",
     ],
   },
 };
